@@ -1,0 +1,193 @@
+<!-- <!-- <!-- <!DOCTYPE html>
+<html>
+<head>
+	<title>Timer</title>
+	<style>
+		body {
+			background-color: #222;
+			color: #fff;
+			font-family: Arial, sans-serif;
+			text-align: center;
+		}
+		
+		.timer {
+			display: inline-block;
+			background-color: #444;
+			border-radius: 10px;
+			padding: 20px;
+			font-size: 48px;
+			box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+		}
+	</style>
+</head>
+<body>
+	<div class="timer">00:00:00</div>
+	<button onclick="startTimer()">Start</button>
+	<button onclick="stopTimer()">Stop</button>
+	<script>
+		let timer;
+		let startTime;
+		
+		function updateTimer() {
+			let now = new Date();
+			let elapsedTime = now.getTime() - startTime.getTime();
+			let hours = Math.floor(elapsedTime / 3600000);
+			let minutes = Math.floor((elapsedTime - hours * 3600000) / 60000);
+			let seconds = Math.floor((elapsedTime - hours * 3600000 - minutes * 60000) / 1000);
+			let time = padZeroes(hours) + ":" + padZeroes(minutes) + ":" + padZeroes(seconds);
+			document.querySelector(".timer").textContent = time;
+		}
+		
+		function padZeroes(number) {
+			if (number < 10) {
+				return "0" + number;
+			} else {
+				return number;
+			}
+		}
+		
+		function startTimer() {
+			startTime = new Date();
+			timer = setInterval(updateTimer, 1000);
+		}
+		
+		function stopTimer() {
+			clearInterval(timer);
+		}
+	</script>
+</body>
+</html>
+ -->
+
+ <!-- <!DOCTYPE html>
+<html>
+<head>
+	<title>Countdown Timer</title>
+	<style>
+		body {
+			background-color: #333;
+			color: #fff;
+			font-family: Arial, sans-serif;
+			font-size: 36px;
+			text-align: center;
+		}
+		input {
+			font-size: 24px;
+			padding: 5px;
+			border-radius: 5px;
+			border: none;
+			margin: 20px;
+		}
+		button {
+			font-size: 24px;
+			padding: 10px 20px;
+			border-radius: 5px;
+			border: none;
+			background-color: #f00;
+			color: #fff;
+			cursor: pointer;
+		}
+	</style>
+</head>
+<body>
+	<h1>Countdown Timer</h1>
+	<p>Enter the time in seconds:</p>
+	<input type="number" id="time-input">
+	<button onclick="startTimer()">Start</button>
+	<p id="timer"></p>
+
+	<script>
+		var timerElement = document.getElementById('timer');
+		var timeInput = document.getElementById('time-input');
+
+		function startTimer() {
+			var timeRemaining = timeInput.value;
+
+			var countdownInterval = setInterval(function() {
+				if (timeRemaining <= 0) {
+					clearInterval(countdownInterval);
+					timerElement.textContent = "Time's up!";
+				} else {
+					timerElement.textContent = timeRemaining;
+					timeRemaining--;
+				}
+			}, 1000);
+		}
+	</script>
+</body>
+</html> -->
+ --> -->
+ <!DOCTYPE html>
+<html>
+<head>
+	<title>Countdown Timer</title>
+	<style>
+		body {
+			background-color: #333;
+			color: #fff;
+			font-family: Arial, sans-serif;
+			font-size: 36px;
+			text-align: center;
+		}
+		input {
+			font-size: 24px;
+			padding: 5px;
+			border-radius: 5px;
+			border: none;
+			margin: 20px;
+		}
+		button {
+			font-size: 24px;
+			padding: 10px 20px;
+			border-radius: 5px;
+			border: none;
+			background-color: #f00;
+			color: #fff;
+			cursor: pointer;
+		}
+	</style>
+</head>
+<body>
+	<h1>Countdown Timer</h1>
+	<p>Enter the time:</p>
+	<label for="hours-input">Hours:</label>
+	<input type="number" id="hours-input" min="0">
+	<label for="minutes-input">Minutes:</label>
+	<input type="number" id="minutes-input" min="0" max="59">
+	<label for="seconds-input">Seconds:</label>
+	<input type="number" id="seconds-input" min="0" max="59">
+	<button onclick="startTimer()">Start</button>
+	<p id="timer"></p>
+
+	<script>
+		var timerElement = document.getElementById('timer');
+		var hoursInput = document.getElementById('hours-input');
+		var minutesInput = document.getElementById('minutes-input');
+		var secondsInput = document.getElementById('seconds-input');
+
+		function startTimer() {
+			var hours = parseInt(hoursInput.value) || 0;
+			var minutes = parseInt(minutesInput.value) || 0;
+			var seconds = parseInt(secondsInput.value) || 0;
+
+			var timeRemaining = hours * 3600 + minutes * 60 + seconds;
+
+			var countdownInterval = setInterval(function() {
+				if (timeRemaining <= 0) {
+					clearInterval(countdownInterval);
+					timerElement.textContent = "Time's up!";
+				} else {
+					var hoursRemaining = Math.floor(timeRemaining / 3600);
+					var minutesRemaining = Math.floor((timeRemaining % 3600) / 60);
+					var secondsRemaining = timeRemaining % 60;
+
+					var formattedTime = ('0' + hoursRemaining).slice(-2) + ':' + ('0' + minutesRemaining).slice(-2) + ':' + ('0' + secondsRemaining).slice(-2);
+
+					timerElement.textContent = formattedTime;
+					timeRemaining--;
+				}
+			}, 1000);
+		}
+	</script>
+</body>
+</html>
