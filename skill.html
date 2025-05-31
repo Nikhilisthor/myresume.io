@@ -3,9 +3,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="Author" content="NIKHIL VIAJY INGOLE">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>My Skills</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <style>
-    /* Set page background color */
+    body {
+      background-color: #f1f1f1;
+      font-family: Arial, sans-serif;
+      background-image: url("back2.JPG");
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
     .social-media {
       display: inline-block;
       margin-right: 15px;
@@ -17,126 +25,123 @@
     .social-media img {
       width: 30px;
       height: 30px;
-      margin-right: 5px;
       vertical-align: middle;
     }
-    /*body {
-      background-color: #f7f7f7;
-    }
-*/
-    /* Set page border */
     .page-container {
       border: 2px solid #ccc;
       padding: 20px;
-      margin: 20px;
+      margin: 20px auto;
       border-radius: 10px;
+      background-color: white;
+      max-width: 900px;
     }
-
-    /* Style skill blocks */
     .skill-block {
       background-color: #fff;
       padding: 20px;
-      margin: 10px;
+      margin: 10px 0;
       border-radius: 5px;
       box-shadow: 0 0 10px #ddd;
       transition: box-shadow 0.2s ease-in-out;
     }
-
-    /* Add hover effect to skill blocks */
     .skill-block:hover {
       box-shadow: 0 0 15px #ccc;
     }
-    nav a {
-      display: inline-block;
-      color: #fff;
-      font-size: 18px;
-      margin: 0 10px;
-      padding: 10px;
-      text-decoration: none;
-      border-radius: 5px;
-      transition: background-color 0.3s;
-    }
-    
-    nav a:hover {
-      background-color:lightgray;
-      color: #777;
-    }
-    body {
-      margin: 0;
-      padding: 0;
-      background-color: #f1f1f1;
-      font-family: Arial, sans-serif;
-      background-image: url("back2.JPG");
-      background-size:100%;
-    }
-    header {
-      text-align: center;
-      background-color: #333;
-      color: #fff;
-      padding: 20px;
-      font-size: 30px;
-      font-weight: bold;
-    }
-
-
-    /* Style footer */
-/*    footer {
-      background-color: #f7f7f7;
-      border-top: 2px solid #ccc;
-      padding: 10px;
-      margin-top: 20px;
-      text-align: center;
-    }*/
   </style>
 </head>
 <body>
-  <header>
-  <nav style="background-color:#333;   color: grey;">
-     <center>
-   <a href="education.html">Education</a>
-    <a href="skill.html">Skills</a>
-    <a href="project.html">Project</a>
-    <a href="ex.html">Experience</a>
-       <!-- <a href="curricularactivities.html">Curricular Activities</a> -->
-    <a href="achivement.html">Achivements</a>
-    <a href="hobbies.html">Hobbies</a>
-    <a href="contact.html">Contact</a>
-    </center>
-  </nav>
-</header>
+  <header class="bg-dark text-white text-center py-3">
+    <nav class="nav justify-content-center">
+      <a class="nav-link text-white" href="education.html">Education</a>
+      <a class="nav-link text-white" href="skill.html">Skills</a>
+      <a class="nav-link text-white" href="project.html">Project</a>
+      <a class="nav-link text-white" href="ex.html">Experience</a>
+      <a class="nav-link text-white" href="achivement.html">Achivements</a>
+      <a class="nav-link text-white" href="hobbies.html">Hobbies</a>
+      <a class="nav-link text-white" href="contact.html">Contact</a>
+    </nav>
+  </header>
+
   <div class="page-container">
-    <h1>Technical Skills:</h1>
-    <div class="skill-block"><h3>Manual Testing-</h3><br>-Knowledge of Black Box Testing and White Box Testing. <br>-Understand of SDLC.<br>-Knowledge of STLC.<br>-Good in writing a Function and Integration Testing Scenario</div>
-    <div class="skill-block"><h3>SQL-</h3>
-      <br>-Knowledge of RDBMS concept.<br>-Comfortable in writing SQL statements like DDL, DML, DQL<br>-Good understand of SQL queries</div>
-    <div class="skill-block"><h3>JAVA</h3><br>-Basic understand of JDK architecture, Token etc.<br>
--Knowledge of Control flow statement like conditional and looping statement.<br>
--Good understand Method designing and it's types.<br>
--Understand of String ,string buffer and string builder.<br>
--Basic knowledge of Oops concept inheritance abstraction and interface and 
-Exception handling, Collection</div>
-    <div class="skill-block"><h3>WEB TECHNOLOGY</h3><br>
--HTML<br>
--CSS<br>
--Java Script</div>
-  </div><br>
-   <center> 
-    <!-- Social media links -->
+    <h1 class="text-center mb-4">Technical Skills:</h1>
+    <div class="skill-block">
+      <h3>Automation(Selenium Tool)</h3>
+      <ul>
+        <li>Knowledge of Test script.</li>
+        <li>Understanding of SDLC.</li>
+        <li>Knowledge of STLC.</li>
+        <li>Good in writing Function and Integration Testing Scenarios.</li>
+      </ul>
+    </div>
+    <div class="skill-block">
+      <h3>Manual Testing</h3>
+      <ul>
+        <li>Knowledge of Black Box Testing and White Box Testing</li>
+        <li>Understanding of SDLC</li>
+        <li>Knowledge of STLC</li>
+        <li>Good in writing Function and Integration Testing Scenarios</li>
+      </ul>
+    </div>
+    <div class="skill-block">
+      <h3>SQL</h3>
+      <ul>
+        <li>Knowledge of RDBMS concepts</li>
+        <li>Comfortable writing SQL statements like DDL, DML, DQL</li>
+        <li>Good understanding of SQL queries</li>
+      </ul>
+    </div>
+    <div class="skill-block">
+      <h3>JAVA</h3>
+      <ul>
+        <li>Basic understanding of JDK architecture, Tokens, etc.</li>
+        <li>Knowledge of Control flow statements like conditionals and loops</li>
+        <li>Understanding Method design and its types</li>
+        <li>Understanding of String, StringBuffer, and StringBuilder</li>
+        <li>Basic knowledge of OOP concepts like inheritance, abstraction, interfaces</li>
+        <li>Knowledge of Exception handling and Collections</li>
+      </ul>
+    </div>
+    <div class="skill-block">
+      <h3>Web Technology</h3>
+      <ul>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+      </ul>
+    </div>
+     <div class="skill-block">
+      <h3>EDF(Excellent Data Filler)</h3>
+      <ul>
+        <li>Good understanding of Flow,Script.</li>
+        <li>Knowledge of Database, Prompt.</li>
+      </ul>
+    </div>
+    <div class="skill-block">
+      <h3>Microsoft Power Automate</h3>
+      <ul>
+        <li>Good understanding of Flow,Script.</li>
+        <li>Knowledge of Database, Prompt.</li>
+      </ul>
+    </div>
+
+  </div>
+
+  <div class="text-center my-4">
     <a href="https://github.com/Nikhilisthor" target="_blank" class="social-media">
-    <img src="https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-social-github-512.png" alt="GitHub">
-  </a>
-  <a href="https://www.linkedin.com/in/nikhilvijayingole08/" target="_blank" class="social-media">
-    <img src="https://cdn4.iconfinder.com/data/icons/social-messaging-ui-color-shapes-2-free/128/social-linkedin-circle-512.png" alt="LinkedIn">
-  </a>
-  <a href="https://twitter.com/NIKHILV19619990?t=Nz3xRNLvt5xLrm-UsCJ1YA&s=08" target="_blank" class="social-media">
-    <img src="https://cdn3.iconfinder.com/data/icons/capsocial-round/500/twitter-512.png" alt="Twitter">
-  </a>
-  <a href="https://www.instagram.com/inikhilvijay/?igshid=ZDdkNTZiNTM%3D" target="_blank" class="social-media">
-    <img src="https://cdn4.iconfinder.com/data/icons/social-messaging-ui-color-shapes-2-free/128/social-instagram-new-circle-512.png" alt="Instagram">
-  </a>
-  </center>
-   <footer class="foot" style="background-color: grey; color: black; ">
-  <p align="right">&copy;<a href="navresume.html">NIKHIL VIJAY INGOLE ....All rights reserved 2023.</a> </p>
-</footer>
+      <img src="https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-social-github-512.png" alt="GitHub">
+    </a>
+    <a href="https://www.linkedin.com/in/nikhilvijayingole08/" target="_blank" class="social-media">
+      <img src="https://cdn4.iconfinder.com/data/icons/social-messaging-ui-color-shapes-2-free/128/social-linkedin-circle-512.png" alt="LinkedIn">
+    </a>
+    <a href="https://twitter.com/NIKHILV19619990" target="_blank" class="social-media">
+      <img src="https://cdn3.iconfinder.com/data/icons/capsocial-round/500/twitter-512.png" alt="Twitter">
+    </a>
+    <a href="https://www.instagram.com/inikhilvijay/" target="_blank" class="social-media">
+      <img src="https://cdn4.iconfinder.com/data/icons/social-messaging-ui-color-shapes-2-free/128/social-instagram-new-circle-512.png" alt="Instagram">
+    </a>
+  </div>
+
+  <footer class="text-end bg-secondary text-white py-2 px-3">
+    <p class="mb-0">&copy; <a href="navresume.html" class="text-white">NIKHIL VIJAY INGOLE .... All rights reserved 2023.</a></p>
+  </footer>
 </body>
 </html>
